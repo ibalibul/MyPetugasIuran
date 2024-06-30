@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/spalshScreenFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.mylaporpetugas.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_detailPengaduanFragment"
+            app:destination="@id/detailPengaduanFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_profileDesaFragment"
+            app:destination="@id/profileDesaFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_wisataFragment"
+            app:destination="@id/wisataFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.mylaporpetugas.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/spalshScreenFragment"
+        android:name="com.example.mylaporpetugas.SpalshScreenFragment"
+        android:label="fragment_spalsh_screen"
+        tools:layout="@layout/fragment_spalsh_screen" >
+        <action
+            android:id="@+id/action_spalshScreenFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.mylaporpetugas.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.mylaporpetugas.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_helpFragment"
+            app:destination="@id/helpFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailPengaduanFragment"
+        android:name="com.example.mylaporpetugas.DetailPengaduanFragment"
+        android:label="fragment_detail_pengaduan"
+        tools:layout="@layout/fragment_detail_pengaduan" >
+        <action
+            android:id="@+id/action_detailPengaduanFragment_to_tindakLanjutFragment"
+            app:destination="@id/tindakLanjutFragment" />
+        <action
+            android:id="@+id/action_detailPengaduanFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="com.example.mylaporpetugas.HelpFragment"
+        android:label="fragment_help"
+        tools:layout="@layout/fragment_help" >
+        <action
+            android:id="@+id/action_helpFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tindakLanjutFragment"
+        android:name="com.example.mylaporpetugas.TindakLanjutFragment"
+        android:label="fragment_tindak_lanjut"
+        tools:layout="@layout/fragment_tindak_lanjut" />
+    <fragment
+        android:id="@+id/profileDesaFragment"
+        android:name="com.example.mylaporpetugas.ProfileDesaFragment"
+        android:label="fragment_profile_desa"
+        tools:layout="@layout/fragment_profile_desa" >
+        <action
+            android:id="@+id/action_profileDesaFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/wisataFragment"
+        android:name="com.example.mylaporpetugas.WisataFragment"
+        android:label="fragment_wisata"
+        tools:layout="@layout/fragment_wisata" >
+        <action
+            android:id="@+id/action_wisataFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>
