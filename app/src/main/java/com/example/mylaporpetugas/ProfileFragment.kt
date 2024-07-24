@@ -28,5 +28,12 @@ class ProfileFragment : Fragment() {
         binding.toolbarProfile.setOnClickListener{
             Navigation.findNavController(view).navigate(R.id.action_profileFragment_to_homeFragment)
         }
+        binding.btnHelp.setOnClickListener{
+            Navigation.findNavController(view).navigate(R.id.action_profileFragment_to_helpMeFragment)
+        }
+
+        binding.btnAccountname.setOnClickListener{
+            Navigation.findNavController(view).navigate(R.id.action_profileFragment_to_detailAccountFragment)
+        }
     }
 }
