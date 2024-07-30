@@ -7,7 +7,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object RetroftUser {
 
-    const val BASE_URL = "https://6340e78716ffb7e275c7134c.mockapi.io/"
+    const val BASE_URL = "https://810d-2404-c0-2420-00-709b-410f.ngrok-free.app/"
 
     private val logging : HttpLoggingInterceptor
         get(){

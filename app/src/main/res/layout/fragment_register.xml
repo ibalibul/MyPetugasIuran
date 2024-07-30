@@ -68,17 +68,35 @@
             android:inputType="textPassword"/>
     </com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edNomerTelphone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edPasswordSignUp"
+        android:padding="10dp"
+        app:boxBackgroundColor="@color/white"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edNoTlp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="NoTelphone"
+            android:inputType="number"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
     <CheckBox
         android:id="@+id/Checkboxlogin"
         android:layout_marginTop="20dp"
         android:layout_marginStart="10dp"
         android:text="I Agree to the Terms &amp; Conditions \n and Privacy Policy "
-        android:layout_below="@+id/edPasswordSignUp"
+        android:layout_below="@+id/edNomerTelphone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
     <Button
-        android:id="@+id/btnlogin"
+        android:id="@+id/btnRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/Checkboxlogin"
@@ -88,7 +106,7 @@
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
         android:backgroundTint="@color/Blue"
-        android:text="Login"
+        android:text="Register"
         android:textColor="@color/white" />
 
     <TextView
@@ -99,12 +117,12 @@
         android:text="Or"
         android:textSize="12sp"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/btnlogin"/>
+        android:layout_below="@id/btnRegister"/>
 
     <View
         android:layout_width="155dp"
         android:layout_height="3dp"
-        android:layout_below="@id/btnlogin"
+        android:layout_below="@id/btnRegister"
         android:layout_alignParentLeft="true"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="19dp"
@@ -114,7 +132,7 @@
     <View
         android:layout_width="155dp"
         android:layout_height="3dp"
-        android:layout_below="@id/btnlogin"
+        android:layout_below="@id/btnRegister"
         android:layout_alignParentRight="true"
         android:layout_marginStart="19dp"
         android:layout_marginTop="20dp"

@@ -1,8 +1,12 @@
 package com.example.mylaporpetugas.adapter
 
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.example.mylaporpetugas.R
 import com.example.mylaporpetugas.databinding.ItemWisataBinding
 import com.example.mylaporpetugas.model.ResponseDataWisataItem
 
@@ -19,21 +23,22 @@ class WisataAdapter(private val listWisata: List<ResponseDataWisataItem>?) : Rec
 
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val currentItem = listWisata?.get(position)
 
         // Bind data to views
-        holder.binding.nameBungur.text = currentItem?.nama
-        holder.binding.DescriptionBungur.text = currentItem?.deskrpsi
-        holder.binding.lokasi.text = currentItem?.alamat
+        holder.binding.nameBungur.text = listWisata!![position].nama
+        holder.binding.DescriptionBungur.text = listWisata[position].deskrpsi
+        holder.binding.lokasi.text = listWisata[position].alamat
+        Glide.with(holder.itemView).load(listWisata[position].foto).into(holder.binding.imgBungur)
 
-        // Load image using Glide (example)
-        // Uncomment this if you have Glide configured and want to load images
-//        Glide.with(holder.itemView.context)
-//            .load(currentItem?.foto)
-//            .into(holder.binding.imgBungur)
+        holder.binding.crdItemWisata.setOnClickListener{
+           var bundlee = Bundle()
+            bundlee.putSerializable("dataWisata",listWisata[position])
+            Navigation.findNavController(it).navigate(R.id.action_homeFragment_to_detailWisataFragment,bundlee)
+
+        }
 
     }
     override fun getItemCount(): Int {
-        return listWisata?.size ?:0
+        return listWisata!!.size
     }
 }

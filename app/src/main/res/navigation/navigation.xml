@@ -22,6 +22,12 @@
         <action
             android:id="@+id/action_homeFragment_to_wisataFragment"
             app:destination="@id/wisataFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_detailPengaduanWisataFragment"
+            app:destination="@id/detailPengaduanWisataFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_detailWisataFragment"
+            app:destination="@id/detailWisataFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
@@ -138,5 +144,23 @@
         <action
             android:id="@+id/action_helpMeFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailPengaduanWisataFragment"
+        android:name="com.example.mylaporpetugas.DetailPengaduanWisataFragment"
+        android:label="fragment_detail_pengaduan_wisata"
+        tools:layout="@layout/fragment_detail_pengaduan_wisata" >
+        <action
+            android:id="@+id/action_detailPengaduanWisataFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailWisataFragment"
+        android:name="com.example.mylaporpetugas.viewmodel.DetailWisataFragment"
+        android:label="fragment_detail_wisata"
+        tools:layout="@layout/fragment_detail_wisata" >
+        <action
+            android:id="@+id/action_detailWisataFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
 </navigation>

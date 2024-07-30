@@ -4,14 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".DetailPengaduanFragment">
+    tools:context=".DetailPengaduanWisataFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/crd_DetailPengaduan"
+            android:id="@+id/crd_DetailWisata"
             android:layout_marginTop="30dp"
             app:cardCornerRadius="20dp"
             android:layout_margin="10dp"
@@ -26,7 +26,7 @@
                 android:layout_height="499dp"/>
 
             <ImageView
-                android:id="@+id/btn_backDetailPengaduan"
+                android:id="@+id/btn_backDetailWisata"
                 android:src="@drawable/img_2"
                 android:layout_margin="5dp"
                 android:layout_width="50dp"
@@ -39,7 +39,7 @@
             android:textSize="30dp"
             android:layout_margin="10dp"
             android:textStyle="bold"
-            android:layout_below="@+id/crd_DetailPengaduan"
+            android:layout_below="@+id/crd_DetailWisata"
             android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -52,7 +52,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <TextView
-            android:id="@+id/lokasiBerita"
+            android:id="@+id/lokasiWisata"
             android:text="Pondok Ranji"
             android:layout_below="@+id/txt_monomentNasionalDetail"
             android:layout_margin="10dp"
@@ -62,47 +62,10 @@
             android:layout_height="wrap_content"/>
 
         <TextView
-            android:id="@+id/txt_descripsiBerita"
+            android:id="@+id/txt_descripsiWisata"
             android:layout_below="@id/img_location"
             android:layout_margin="10dp"
             android:text="Monumen Nasional atau yang disingkat dengan Monas atau Tugu Monas adalah monumen peringatan setinggi 132 meter yang terletak tepat di tengah Lapangan Medan Merdeka, Jakarta Pusat."
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <TextView
-            android:id="@+id/txt_notlpn"
-            android:text="Nomer Telphone:"
-            android:layout_below="@+id/txt_descripsiBerita"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <TextView
-            android:text="0812321312332"
-            android:layout_marginLeft="250dp"
-            android:layout_below="@+id/txt_descripsiBerita"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <TextView
-            android:id="@+id/txt_tgl"
-            android:text="Tanggal :"
-            android:layout_below="@+id/txt_notlpn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <TextView
-            android:id="@+id/tanggalPengadu"
-            android:text="22-juni-2023"
-            android:layout_below="@+id/txt_notlpn"
-            android:layout_marginLeft="250dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <TextView
-            android:id="@+id/notlpnPengadu"
-            android:text="0812321312332"
-            android:layout_marginLeft="250dp"
-            android:layout_below="@+id/txt_descripsiBerita"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 

@@ -14,6 +14,7 @@ class ViewModelWisata: ViewModel() {
     private var liveDataWisata: MutableLiveData<List<ResponseDataWisataItem>?>
 
 
+
     init {
         liveDataWisata = MutableLiveData()
     }
@@ -22,9 +23,9 @@ class ViewModelWisata: ViewModel() {
         return liveDataWisata
     }
 
-    fun callDataWisata(){
+   fun getCallDataWisata(){
         RetrofitClient.instance.getallpotensidesa()
-            .enqueue(object :Callback<List<ResponseDataWisataItem>>{
+            .enqueue(object : Callback<List<ResponseDataWisataItem>>{
                 override fun onResponse(
                     call: Call<List<ResponseDataWisataItem>>,
                     response: Response<List<ResponseDataWisataItem>>
@@ -40,5 +41,7 @@ class ViewModelWisata: ViewModel() {
                 }
 
             })
-    }
+   }
 }
+
+

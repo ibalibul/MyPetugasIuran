@@ -9,9 +9,10 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView.LayoutManager
+import com.example.mylaporpetugas.adapter.PengaduanAdapter
 import com.example.mylaporpetugas.adapter.WisataAdapter
 import com.example.mylaporpetugas.databinding.FragmentHomeBinding
+import com.example.mylaporpetugas.viewmodel.ViewModelPengaduan
 import com.example.mylaporpetugas.viewmodel.ViewModelWisata
 
 
@@ -33,7 +34,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-//        showDataWisata()
+        showDataPengaduan()
         showDataWisataa()
 
         binding.cardProfileDesa.setOnClickListener {
@@ -68,15 +69,24 @@ class HomeFragment : Fragment() {
 
     fun showDataWisataa() {
         val viewModel = ViewModelProvider(this).get(ViewModelWisata::class.java)
-        viewModel.callDataWisata()
-        viewModel.getLiveDataWisata().observe(viewLifecycleOwner, Observer { data ->
-            data?.let {
+        viewModel.getCallDataWisata()
+        viewModel.getLiveDataWisata().observe(viewLifecycleOwner, Observer {
+            if (it != null)
                 binding.rvWisata.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
                 binding.rvWisata.adapter = WisataAdapter(it)
-            }
+
         })
     }
 
+    fun showDataPengaduan() {
+        val viewModel = ViewModelProvider(this).get(ViewModelPengaduan::class.java)
+        viewModel.getCallDataPengaduan()
+        viewModel.getLiveDataPengaduan().observe(viewLifecycleOwner, Observer {
+            if (it != null)
+                binding.rvBerita.layoutManager = LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false)
+                binding.rvBerita.adapter = PengaduanAdapter(it)
+        })
+    }
 
 
 

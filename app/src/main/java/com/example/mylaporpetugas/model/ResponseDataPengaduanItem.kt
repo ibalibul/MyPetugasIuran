@@ -4,19 +4,23 @@ package com.example.mylaporpetugas.model
 import com.google.gson.annotations.SerializedName
 import java.io.Serializable
 
-data class ResponseDataWisataItem(
-    @SerializedName("alamat")
-    val alamat: String,
+data class ResponseDataPengaduanItem(
     @SerializedName("createdAt")
     val createdAt: String,
-    @SerializedName("deskrpsi")
-    val deskrpsi: String,
+    @SerializedName("deskripsi")
+    val deskripsi: String,
     @SerializedName("foto")
     val foto: String,
     @SerializedName("id")
     val id: Int,
-    @SerializedName("nama")
-    val nama: String,
+    @SerializedName("Judul")
+    val judul: String,
+    @SerializedName("lokasi")
+    val lokasi: String,
+    @SerializedName("notlp")
+    val notlp: Long,
+    @SerializedName("tanggal")
+    val tanggal: String,
     @SerializedName("updatedAt")
     val updatedAt: String
-) : Serializable
+): Serializable
